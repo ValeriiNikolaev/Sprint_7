@@ -1,4 +1,4 @@
-package Order;
+package ModelOrder;
 
 
 import java.util.Random;
@@ -42,7 +42,7 @@ public class OrderGeneration {
     }
 
     public static String getRandomPhone() {
-        return getRandomLong(11111111111111111L, 99999999999999999L) + "";
+        return getRandomLong(1111111111111111L, 9999999999999999L) + "";
     }
 
 }

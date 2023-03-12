@@ -1,4 +1,4 @@
-package Models;
+package ModelsCourier;
 
 public class CreateCourier extends Courier {
     private String firstName;
