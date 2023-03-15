@@ -1,7 +1,7 @@
-package Steps;
+package steps;
 
 
-import ModelOrder.CreateOrder;
+import model_order.CreateOrder;
 import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
@@ -9,17 +9,17 @@ import io.restassured.response.ValidatableResponse;
 import static io.restassured.RestAssured.given;
 
 public class OrderSteps {
-    public final String BASE_URI = "http://qa-scooter.praktikum-services.ru";
-    public final String Api_Order = "/api/v1/orders";
+    public static final String baseUri = "http://qa-scooter.praktikum-services.ru";
+    public static final String apiOrder = "/api/v1/orders";
 
 
     @Step ("Get order list")
     public ValidatableResponse getOrderList() {
         return given()
                 .contentType(ContentType.JSON)
-                .baseUri(BASE_URI)
+                .baseUri(baseUri)
                 .when()
-                .get(Api_Order)
+                .get(apiOrder)
                 .then();
     }
 
@@ -28,10 +28,10 @@ public class OrderSteps {
     public ValidatableResponse createOrder(CreateOrder order) {
         return given()
                 .contentType(ContentType.JSON)
-                .baseUri(BASE_URI)
+                .baseUri(baseUri)
                 .body(order)
                 .when()
-                .post(Api_Order)
+                .post(apiOrder)
                 .then();
     }
 

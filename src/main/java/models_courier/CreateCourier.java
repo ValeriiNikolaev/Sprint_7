@@ -1,4 +1,4 @@
-package ModelsCourier;
+package models_courier;
 
 public class CreateCourier extends Courier {
     private String firstName;

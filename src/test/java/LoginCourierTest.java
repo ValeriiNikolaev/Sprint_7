@@ -1,7 +1,7 @@
-import ModelsCourier.Courier;
-import ModelsCourier.CourierGeneration;
-import ModelsCourier.CreateCourier;
-import Steps.ClientSteps;
+import models_courier.Courier;
+import models_courier.CourierGeneration;
+import models_courier.CreateCourier;
+import steps.ClientSteps;
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.Matchers;
 import org.junit.After;

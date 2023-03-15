@@ -1,4 +1,4 @@
-package ModelsCourier;
+package models_courier;
 
 import java.util.Random;
 

@@ -1,7 +1,7 @@
-package Steps;
+package steps;
 
-import ModelsCourier.Courier;
-import ModelsCourier.CreateCourier;
+import models_courier.Courier;
+import models_courier.CreateCourier;
 import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
@@ -10,15 +10,15 @@ import static io.restassured.RestAssured.given;
 
 public class ClientSteps {
 
-    public final String BASE_URI = "http://qa-scooter.praktikum-services.ru";
+    public static final String base_uri = "http://qa-scooter.praktikum-services.ru";
 
-    public final String api_courier = "/api/v1/courier";
+    public static final String api_courier = "/api/v1/courier";
 
     @Step ("Create courier")
     public ValidatableResponse createCourier(CreateCourier client) {
         return given()
                 .contentType(ContentType.JSON)
-                .baseUri(BASE_URI)
+                .baseUri(base_uri)
                 .body(client)
                 .when()
                 .post(api_courier)
@@ -29,7 +29,7 @@ public class ClientSteps {
     public ValidatableResponse loginClient(Courier client) {
         return given()
                 .contentType(ContentType.JSON)
-                .baseUri(BASE_URI)
+                .baseUri(base_uri)
                 .body(client)
                 .when()
                 .post(api_courier + "/login")
@@ -44,9 +44,9 @@ public class ClientSteps {
     public void deleteClient (int id) {
         given()
                 .contentType(ContentType.JSON)
-                .baseUri(BASE_URI)
+                .baseUri(base_uri)
                 .when()
-                .delete(api_courier + "/id")
+                .delete(api_courier + "/" +id)
                 .then();
     }
 

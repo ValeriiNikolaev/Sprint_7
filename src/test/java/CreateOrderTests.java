@@ -1,6 +1,6 @@
-import ModelOrder.CreateOrder;
-import ModelOrder.OrderGeneration;
-import Steps.OrderSteps;
+import model_order.CreateOrder;
+import model_order.OrderGeneration;
+import steps.OrderSteps;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
